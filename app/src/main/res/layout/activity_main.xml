@@ -4,8 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.dawiddelimata.myapplication.MainActivity">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        tools:context="com.example.dawiddelimata.myapplication.MainActivity"
+        tools:layout_editor_absoluteY="25dp"
+        tools:layout_editor_absoluteX="0dp">
 
 
     <ImageView
@@ -17,16 +30,18 @@
         android:alpha="0.95"
         android:scaleType="fitXY"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <!--ImageView
+        android:id="@+id/imageView7"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         ads:srcCompat="@drawable/backgroundfilter"
         android:gravity="center"
         android:alpha="0.95"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        tools:ignore="DuplicateIds" /-->
 
     <include
+
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
         >
@@ -169,10 +184,31 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
 
-
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:onClick="result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bmiCat"
+                android:background="@color/colorCustom2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                ads:srcCompat="@drawable/forward" />
 
 
         </RelativeLayout>
     </ScrollView>
+
+        <com.google.android.gms.ads.AdView
+            android:layout_marginTop="3dp"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1989255292557669/7509769377"></com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
 
 </RelativeLayout>
